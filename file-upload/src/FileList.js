@@ -10,8 +10,8 @@ const FileList = () => {
     const fetchFiles = async () => {
       if (files === null) {
         const fileList = await getFiles();
-        setFiles(fileList);
-        console.log(fileList);
+        setFiles(fileList.data);
+        console.log(fileList.data);
       }
     };
     fetchFiles();
